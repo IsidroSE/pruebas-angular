@@ -9,7 +9,7 @@ export class MedicosService {
 
   constructor( public http: HttpClient ) { }
 
-  getMedicos(): Observable<Medico[]> {
+  getMedicos(): any {
     return this.http.get('...').pipe(
       map( (resp: any) => resp['medicos'])
     );
