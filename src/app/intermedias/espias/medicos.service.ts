@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
 import { map, Observable } from 'rxjs';
 import { Medico } from './medicos.component';
 
@@ -15,13 +14,13 @@ export class MedicosService {
     );
   }
 
-  agregarMedico( medico: Medico ): Observable<Medico[]> {
+  agregarMedico( medico: Medico ): any {
     return this.http.post('...', medico ).pipe(
       map( (resp: any) => resp['medico'] )
     );
   }
 
-  borrarMedico( id: string ): Observable<Medico[]> {
+  borrarMedico( id: string ): any {
     return this.http.delete('...' ).pipe(
       map( (resp: any) => resp['medico'] )
     );
