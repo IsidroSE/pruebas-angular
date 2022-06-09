@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { MedicosComponent } from './intermedias/espias/medicos.component';
 import { MedicoComponent } from './intermedias2/medico/medico.component';
 import { MedicoService } from './intermedias2/medico/medico.service';
+import { HospitalComponent } from './intermedias2/hospital/hospital.component';
+import { IncrementadorComponent } from './intermedias2/incrementador/incrementador.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MedicosComponent,
-    MedicoComponent
+    MedicoComponent,
+    HospitalComponent,
+    IncrementadorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     MedicoService
