@@ -58,4 +58,16 @@ describe('Incremendator Component', () => {
         expect( component.progreso ).toBe(50);
     });
 
+    it('En el titulo del componente, debe de mostrar el progreso', () => {
+        
+        const botones = fixture.debugElement.queryAll( By.css('.btn-primary') );
+        
+        botones[0].triggerEventHandler('click', null);
+        fixture.detectChanges();
+        const elem: HTMLElement = fixture.debugElement
+        .query( By.css('h3') ).nativeElement;
+
+        expect( elem.innerHTML ).toContain('45');
+    });
+
 });
